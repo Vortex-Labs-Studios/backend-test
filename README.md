@@ -16,11 +16,11 @@ This system is designed with a microservice architecture to separate responsibil
 
 ### 1. `entity-service`
 
-**Purpose**: Stores and manages player data.
+**Purpose**: Stores and manages players, teams and stats data.
 
 **Responsibilities**:
 - Maintain a database of NFL and NBA players, teams and stats.
-- Provide APIs to fetch entity information by entity type and ID. Entities can either be teams or players.
+- Provide APIs to fetch entity information by entity type and ID. Entities can either be teams or players. There's an interface implementation to handle polymorphism.
 
 ---
 
@@ -31,7 +31,7 @@ This system is designed with a microservice architecture to separate responsibil
 **Responsibilities**:
 - Accept user parlay entries (a combination of picks).
 - Validate picks using data from `entity-service`.
-- Store parlays and picks in a database.
+- Store picks in the database.
 
 ---
 
